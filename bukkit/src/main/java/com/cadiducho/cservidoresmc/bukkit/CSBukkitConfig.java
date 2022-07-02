@@ -40,6 +40,8 @@ public class CSBukkitConfig implements CSConfiguration {
             bukkitPlugin.logError("Tu configuración es de una versión más antigua a la de este plugin!"
                     + "Corrígelo o podrás tener errores..." );
         }
+
+        reloadCustomCommands();
     }
 
     @Override

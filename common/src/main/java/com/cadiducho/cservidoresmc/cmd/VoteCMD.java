@@ -37,7 +37,7 @@ public class VoteCMD extends CSCommand {
         plugin.getApiClient().validateVote(sender.getName()).thenAccept((VoteResponse voteResponse) -> {
             String web = voteResponse.getWeb();
             VoteStatus status = voteResponse.getStatus();
-
+            
             switch (status) {
                 case NOT_VOTED:
                     sender.sendMessageWithTag("&6No has votado hoy! Puedes hacerlo en &a" + web);
